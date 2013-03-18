@@ -1,6 +1,7 @@
 from Products.Zuul.form import schema
-from Products.Zuul.interfaces.component import IComponentInfo
-from Products.Zuul.interfaces.template import IRRDDataSourceInfo
+#from Products.Zuul.interfaces.component import IComponentInfo
+#from Products.Zuul.interfaces.template import IRRDDataSourceInfo
+from Products.Zuul.interfaces.devices import IDeviceInfo
 
 # ZuulMessageFactory is the translation layer. You will see strings intended to
 # been seen in the web interface wrapped in _t(). This is so that these strings
@@ -25,21 +26,3 @@ else:
     MultiLineText = schema.TextLine
 
 
-class IExampleDataSourceInfo(IRRDDataSourceInfo):
-    """
-    Defines what fields should be displayed on the edit dialog for this
-    datasource in the Zenoss web interface.
-    """
-
-    # We inherit common datasource fields like event class, severity and others
-    # from IRRDDataSourceInfo.
-
-    exampleProperty = SingleLineText(
-        title=_t(u'Example Property'),
-        group=_t(u'Example Protocol'),
-        )
-
-
-class IExampleComponentInfo(IComponentInfo):
-    attributeOne = schema.Int(title=_t(u"Attribute #1"))
-    attributeTwo = SingleLineText(title=_t(u"Attribute #2"))
