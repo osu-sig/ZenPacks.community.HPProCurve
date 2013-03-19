@@ -15,39 +15,14 @@ from Products.Zuul.infos import ProxyProperty
 from Products.Zuul.infos.component import ComponentInfo
 from Products.Zuul.infos.template import RRDDataSourceInfo
 
-from ZenPacks.NAMESPACE.PACKNAME.ExampleComponent import ExampleComponent
-from ZenPacks.NAMESPACE.PACKNAME.interfaces \
-    import IExampleDataSourceInfo, IExampleComponentInfo
+from ZenPacks.community.HPProCurve.interfaces import (
+    IHPProCurveSensorInfo
+    )
 
+class HPProCurveSensorInfo(ComponentInfo):
+    implements(IHPProCurveSensorInfo)
 
-class ExampleDataSourceInfo(RRDDataSourceInfo):
-    """
-    Defines API access for this datasource.
-    """
-
-    implements(IExampleDataSourceInfo)
-
-    # ProxyProperty is a shortcut to mean that you want the getter/setter for
-    # this property to go directly to properties of the same name on the
-    # datasource class (ExampleDataSource).
-    exampleProperty = ProxyProperty('exampleProperty')
-
-    # RRDDataSourceInfo classes can create a property called "testable" that
-    # controls whether the datasource dialog in the web interface allows the
-    # user to test it. By default this property is set to True unless you
-    # override it as is done below.
-
-    @property
-    def testable(self):
-        """
-        This datasource is not testable.
-        """
-        return False
-
-
-class ExampleComponentInfo(ComponentInfo):
-    implements(IExampleComponentInfo)
-    adapts(ExampleComponent)
-
-    attributeOne = ProxyProperty("attributeOne")
-    attributeTwo = ProxyProperty("attributeTwo")
+    status = ProxyProperty('status')
+    description = ProxyProperty('description')
+    warnings = ProxyProperty('warnings')
+    failures = ProxyProperty('failures')

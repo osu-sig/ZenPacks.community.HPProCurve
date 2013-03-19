@@ -3,7 +3,7 @@ from Products.ZenModel.ManagedEntity import ManagedEntity
 from Products.ZenModel.ZenossSecurity import ZEN_CHANGE_DEVICE
 from Products.ZenRelations.RelSchema import ToManyCont, ToOne
 
-class Sensor(DeviceComponent, ManagedEntity):
+class HPProCurveSensor(DeviceComponent, ManagedEntity):
     meta_type = portal_type = 'HPProCurveSensor'
 
     status = None
@@ -38,4 +38,4 @@ class Sensor(DeviceComponent, ManagedEntity):
         return self.sensor_device()
 
     def getRRDTemplateName(self):
-        return 'Sensor'
+        return 'HPProCurveSensor'

@@ -5,7 +5,7 @@ from Products.DataCollector.plugins.CollectorPlugin import (
 
 class HPProCurve(SnmpPlugin):
     relname = 'sensors'
-    modname = 'ZenPacks.community.HPProCurve.Sensor'
+    modname = 'ZenPacks.community.HPProCurve.HPProCurveSensor'
 
     snmpGetTableMaps = (
         GetTableMap(

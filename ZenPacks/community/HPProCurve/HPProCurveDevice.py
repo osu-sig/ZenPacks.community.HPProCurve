@@ -10,7 +10,7 @@ class HPProCurveDevice(Device):
 
     _relations = Device._relations + (
     ('sensors', ToManyCont(ToOne,
-        'ZenPacks.community.HPProCurve.Sensor',
+        'ZenPacks.community.HPProCurve.HPProCurveSensor',
         'sensor_device',
         )),
     )

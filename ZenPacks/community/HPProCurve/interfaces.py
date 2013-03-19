@@ -1,7 +1,7 @@
 from Products.Zuul.form import schema
-#from Products.Zuul.interfaces.component import IComponentInfo
+from Products.Zuul.interfaces.component import IComponentInfo
+from Products.Zuul.interfaces.device import IDeviceInfo
 #from Products.Zuul.interfaces.template import IRRDDataSourceInfo
-from Products.Zuul.interfaces.devices import IDeviceInfo
 
 # ZuulMessageFactory is the translation layer. You will see strings intended to
 # been seen in the web interface wrapped in _t(). This is so that these strings
@@ -25,4 +25,8 @@ else:
     SingleLineText = schema.Text
     MultiLineText = schema.TextLine
 
-
+class IHPProCurveSensorInfo(IComponentInfo):
+    status = schema.TextLine(title=_t('Sensor Status'))
+    description = schema.TextLine(title=_t('Sensor Description'))
+    warnings = schema.TextLine(title=_t('Sensor Warnings'))
+    failures = schema.TextLine(title=_t('Sensor Failures'))

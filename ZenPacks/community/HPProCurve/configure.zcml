@@ -4,10 +4,6 @@
     xmlns:zcml="http://namespaces.zope.org/zcml">
 
 
-    <!-- Includes: Browser Configuration -->
-    <include package=".browser"/>
-
-
     <!-- Info Adapters: DataSources
 
     For ZenPacks that add new datasource types you must register their Info
@@ -22,6 +18,16 @@
         factory=".info.ExampleDataSourceInfo"
         />
     -->
+
+    <adapter
+        provides=".interfaces.IHPProCurveSensorInfo"
+        for=".HPProCurveSensor.HPProCurveSensor"
+        factory=".info.HPProCurveSensorInfo"
+    />
+
+
+    <!-- Includes: Browser Configuration -->
+    <include package=".browser"/>
 
 
     <!-- Event Plugins
