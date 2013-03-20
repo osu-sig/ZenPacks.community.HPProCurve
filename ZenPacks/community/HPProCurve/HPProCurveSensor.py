@@ -12,7 +12,7 @@ class HPProCurveSensor(DeviceComponent, ManagedEntity):
     failures = None
 
     _properties = ManagedEntity._properties + (
-        {'id': 'status', 'type': 'int'},
+        {'id': 'status', 'type': 'string'},
         {'id': 'description', 'type': 'string'},
         {'id': 'warnings', 'type': 'int'},
         {'id': 'failures', 'type': 'int'},

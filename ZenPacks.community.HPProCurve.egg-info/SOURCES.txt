@@ -15,6 +15,10 @@ ZenPacks/community/__init__.py
 ZenPacks/community/__init__.pyc
 ZenPacks/community/HPProCurve/ExampleComponent.py
 ZenPacks/community/HPProCurve/ExampleDevice.py
+ZenPacks/community/HPProCurve/HPProCurveDevice.py
+ZenPacks/community/HPProCurve/HPProCurveDevice.pyc
+ZenPacks/community/HPProCurve/HPProCurveSensor.py
+ZenPacks/community/HPProCurve/HPProCurveSensor.pyc
 ZenPacks/community/HPProCurve/LICENSE.txt
 ZenPacks/community/HPProCurve/__init__.py
 ZenPacks/community/HPProCurve/__init__.pyc
@@ -24,7 +28,9 @@ ZenPacks/community/HPProCurve/dynamicview.py
 ZenPacks/community/HPProCurve/events.py
 ZenPacks/community/HPProCurve/impact.py
 ZenPacks/community/HPProCurve/info.py
+ZenPacks/community/HPProCurve/info.pyc
 ZenPacks/community/HPProCurve/interfaces.py
+ZenPacks/community/HPProCurve/interfaces.pyc
 ZenPacks/community/HPProCurve/zenexample.py
 ZenPacks/community/HPProCurve/bin/placeholder.txt
 ZenPacks/community/HPProCurve/browser/__init__.py
@@ -33,6 +39,7 @@ ZenPacks/community/HPProCurve/browser/configure.zcml
 ZenPacks/community/HPProCurve/browser/resources/css/placeholder.txt
 ZenPacks/community/HPProCurve/browser/resources/img/placeholder.txt
 ZenPacks/community/HPProCurve/browser/resources/js/ExampleDevice.js
+ZenPacks/community/HPProCurve/browser/resources/js/HPProCurveDevice.js
 ZenPacks/community/HPProCurve/daemons/zenexample
 ZenPacks/community/HPProCurve/datasources/ExampleDataSource.py.example
 ZenPacks/community/HPProCurve/datasources/__init__.py
@@ -42,12 +49,18 @@ ZenPacks/community/HPProCurve/migrate/ExampleMigration.py
 ZenPacks/community/HPProCurve/migrate/ExampleMigration.pyc
 ZenPacks/community/HPProCurve/migrate/__init__.py
 ZenPacks/community/HPProCurve/modeler/__init__.py
+ZenPacks/community/HPProCurve/modeler/__init__.pyc
 ZenPacks/community/HPProCurve/modeler/plugins/__init__.py
+ZenPacks/community/HPProCurve/modeler/plugins/__init__.pyc
 ZenPacks/community/HPProCurve/modeler/plugins/community/__init__.py
+ZenPacks/community/HPProCurve/modeler/plugins/community/__init__.pyc
 ZenPacks/community/HPProCurve/modeler/plugins/community/cmd/ExampleCMD.py.example
 ZenPacks/community/HPProCurve/modeler/plugins/community/cmd/__init__.py
 ZenPacks/community/HPProCurve/modeler/plugins/community/snmp/ExampleSNMP.py.example
+ZenPacks/community/HPProCurve/modeler/plugins/community/snmp/HPProCurve.py
+ZenPacks/community/HPProCurve/modeler/plugins/community/snmp/HPProCurve.pyc
 ZenPacks/community/HPProCurve/modeler/plugins/community/snmp/__init__.py
+ZenPacks/community/HPProCurve/modeler/plugins/community/snmp/__init__.pyc
 ZenPacks/community/HPProCurve/objects/objects.xml
 ZenPacks/community/HPProCurve/reports/Example_Reports/Example_Report.rpt.example
 ZenPacks/community/HPProCurve/reports/plugins/example_plugin.py

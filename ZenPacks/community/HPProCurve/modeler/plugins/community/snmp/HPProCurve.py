@@ -32,11 +32,26 @@ class HPProCurve(SnmpPlugin):
             sensorindex = row.get('sensorIndex')
             log.info("processing sensor %d", sensorindex)
 
+            rawstatus = row.get('sensorStatus')
+            if rawstatus == 5:
+                log.info("sensor %d not present, skipping", sensorindex)
+                continue
+            elif rawstatus == 4:
+                status = 'good'
+            elif rawstatus == 2:
+                status = 'bad'
+            elif rawstatus == 3:
+                status = 'warning'
+            elif rawstatus == 1:
+                status = 'unknown'
+            else:
+                status = ''
+
             rm.append(self.objectMap({
                 'id': self.prepId(sensorindex),
                 'title': row.get('sensorDescr'),
                 'snmpindex': snmpindex.strip('.'),
-                'status': row.get('sensorStatus'),
+                'status': status,
                 'warnings': row.get('sensorWarnings'),
                 'failures': row.get('sensorFailures'),
                 'description': row.get('sensorDescr'),
