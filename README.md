@@ -1,6 +1,6 @@
 # ZenPacks.community.HPProCurve
 
-A Zenoss ZenPack for monitoring HP ProCurve switches
+This is a very basic, first-stab attempt at a Zenoss ZenPack for monitoring HP ProCurve switches.
 
 ## Dependencies
 
